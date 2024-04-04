@@ -1,0 +1,99 @@
+# New Collection
+
+###
+# @name POST USERS
+POST {{MYIP}}/user
+Content-Type: application/json
+
+{
+  "name": "http 테스트1"
+}
+
+###
+# @name GET USER
+GET {{MYIP}}/user
+
+###
+# @name DEL USER
+DELETE {{MYIP}}/user/1
+
+###
+# @name POST LABELS
+POST {{MYIP}}/user/3/label
+Content-Type: application/json
+
+{
+  "labels": "동생"
+}
+
+###
+# @name GET LABELS
+GET {{MYIP}}/user/1/label
+
+###
+# @name PUT LABELS
+PUT {{MYIP}}/user/1/label/3
+Content-Type: application/json
+
+{
+  "labels": "절친"
+}
+
+###
+# @name DEL LABELS
+DELETE {{MYIP}}/user/3/label/4
+
+###
+# @name POST CONTACT
+POST {{MYIP}}/user/3/contact
+Content-Type: application/json
+
+{
+  "name": "연락처5",
+  "email": "test5@naver.com",
+  "phone_number": "01024566689",
+  "address": "주소5",
+  "image_url": "https://test5.com",
+  "web_site": "https://test5.com"
+}
+
+###
+# @name GET CONTACTS
+GET {{MYIP}}/user/2/contact?
+    ordering=-phone_number
+
+###
+# @name GET CONTACT
+GET {{MYIP}}/contact/2
+
+###
+# @name PUT CONTACT
+PUT {{MYIP}}/contact/4
+Content-Type: application/json
+
+{
+  "email": "test99@naver.com",
+  "company": "키즈노트"
+}
+
+###
+# @name DEL CONTACT
+DELETE {{MYIP}}/contact/4
+
+###
+# @name POST CONTACT_LABEL
+POST {{MYIP}}/contact/2/label
+Content-Type: application/json
+
+{
+  "label_seq": 4,
+  "user_seq": 2
+}
+
+###
+# @name GET CONTACT_LABELS
+GET {{MYIP}}/contact/1/label
+
+###
+# @name DEL CONTACT_LABELS
+DELETE {{MYIP}}/user/3/label/4
